@@ -16,6 +16,7 @@
 }
 
 html {
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
@@ -23,7 +24,8 @@ body {
   margin: 0;
   color: var(--ink);
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 18px;
+  font-size: 22px;
+  line-height: 1.6;
   background:
     radial-gradient(circle at 8% 18%, rgba(211, 169, 230, 0.62), transparent 24rem),
     radial-gradient(circle at 92% 42%, rgba(248, 164, 197, 0.62), transparent 26rem),
@@ -122,9 +124,10 @@ a {
 .eyebrow {
   margin: 0 0 10px;
   color: var(--deep-rose);
-  font-size: 0.83rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -197,7 +200,7 @@ a {
   margin: 0;
   color: var(--ink);
   font-family: "Italiana", Georgia, serif;
-  font-size: 1rem;
+  font-size: 1.125rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   animation: gentle-pulse 2s ease-in-out infinite;
@@ -205,8 +208,9 @@ a {
 
 .sound-note {
   margin: 10px 0 0;
-  color: rgba(33, 26, 32, 0.64);
-  font-size: 0.88rem;
+  color: #59424f;
+  font-size: 1.125rem;
+  line-height: 1.6;
 }
 
 #invitation {
@@ -331,6 +335,7 @@ a {
 }
 
 .hero-date {
+  line-height: 1.6;
   display: grid;
   gap: 3px;
   margin: 20px 0 28px;
@@ -367,10 +372,10 @@ a {
   border: 1px solid transparent;
   border-radius: 999px;
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  line-height: 1;
+  line-height: 1.4;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -509,7 +514,7 @@ a {
 .detail-row h3 {
   margin: 0 0 6px;
   font-family: "Italiana", Georgia, serif;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -569,13 +574,17 @@ a {
   text-align: center;
 }
 
+.ultrasound-copy .script-kicker {
+  color: var(--blush);
+}
+
 .ultrasound-copy h2 {
   color: var(--blush);
 }
 
 .ultrasound-copy p:last-child {
   margin: 0;
-  color: rgba(255, 248, 237, 0.78);
+  color: #fff8ed;
   line-height: 1.55;
 }
 
@@ -692,7 +701,7 @@ a {
 #rsvp-form > label,
 fieldset legend {
   margin-bottom: -10px;
-  font-size: 0.9rem;
+  font-size: 1.125rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -762,7 +771,8 @@ fieldset {
 }
 
 .radio-option small {
-  color: rgba(33, 26, 32, 0.65);
+  font-size: 1.125rem;
+  color: #59424f;
 }
 
 .radio-option input:checked + span {
@@ -792,8 +802,9 @@ fieldset {
 
 .form-note {
   margin: -5px 0 0;
-  color: rgba(33, 26, 32, 0.62);
-  font-size: 0.88rem;
+  color: #59424f;
+  font-size: 1.125rem;
+  line-height: 1.6;
   text-align: center;
 }
 
@@ -867,7 +878,7 @@ fieldset {
 
 footer {
   padding: 54px 20px 44px;
-  color: rgba(255, 248, 237, 0.75);
+  color: #fff8ed;
   text-align: center;
   background: var(--black);
 }
@@ -884,7 +895,7 @@ footer p {
 
 .music-credit {
   margin-top: 24px;
-  font-size: 0.8rem;
+  font-size: 1.125rem;
 }
 
 .reveal {
@@ -1083,4 +1094,60 @@ footer p {
     opacity: 1;
     transform: none;
   }
+}
+
+/* Keep practical information comfortable to read alongside the display lettering. */
+.detail-row p,
+.ultrasound-copy p:last-child,
+.extra-card p:not(.script-kicker),
+.rsvp-heading p:last-child,
+#rsvp-form,
+.success-message p,
+.sound-note,
+footer p:not(.footer-mark) {
+  font-family: Georgia, serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #695360;
+  opacity: 1;
+}
+
+.pumpkin-cluster {
+  display: block;
+  width: min(100%, 340px);
+  height: auto;
+  margin: 24px auto 0;
+  pointer-events: none;
+  filter: drop-shadow(0 12px 12px rgba(78, 40, 56, 0.15));
+}
+
+.rsvp-pumpkins {
+  width: min(100%, 270px);
+  margin: 0 auto 20px;
+}
+
+@media (max-width: 900px) {
+  .event-card { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px) {
+  body { font-size: 20px; }
+  .hero .eyebrow { margin-bottom: 28px; }
+  .hero-art { max-width: 100%; }
+  .detail-row { grid-template-columns: 22px minmax(0, 1fr); gap: 8px; }
+  .rsvp-card { padding-inline: 24px; }
+  .event-card { padding-inline: 24px; }
+  .extra-card { padding-inline: 24px; }
+  .button { padding-inline: 20px; letter-spacing: 0.06em; }
+  .pumpkin-cluster { max-width: 280px; }
+  .rsvp-pumpkins { max-width: 240px; }
+}
+
+@media (max-width: 360px) {
+  .hero-date strong { font-size: 1.35rem; }
+  .eyebrow { letter-spacing: 0.06em; }
+  .parents { font-size: 2.1rem; }
+  .event-card, .rsvp-card, .extra-card { padding-inline: 20px; }
 }
