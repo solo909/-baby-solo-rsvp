@@ -1283,3 +1283,89 @@ footer { margin: 0 12px; border-radius: 30px 30px 76px 76px; background: #171217
 
 #invitation { box-shadow: none; }
 .hero { background: url("panel-sparkles.svg") repeat, radial-gradient(ellipse at center, #fff6f8cc, transparent 70%); background-size: 260px 300px, auto; }
+
+/* Approved artwork and copy refinements. */
+body { background: #070609; padding-top: 86px; isolation: isolate; }
+body::before {
+  display: block; content: ""; position: fixed; inset: 0; z-index: -1;
+  opacity: 1; pointer-events: none;
+  background: #08070a url("invitation-background.png") center / 100% 100% no-repeat;
+}
+#invitation { background: transparent; border: 0; border-radius: 0; box-shadow: none; width: min(100%, 1060px); }
+#invitation::before, .page-ornaments, .opening-screen > .corner-web,
+.opening-screen > .hanging-spider, .hero::before, .hero::after, .star-field { display: none; }
+.hero { background: transparent; padding-top: 38px; padding-bottom: 10px; min-height: auto; margin-bottom: 0; }
+.opening-screen {
+  border: 0; box-shadow: none;
+  background: #08070a url("invitation-background.png") center / 100% 100% no-repeat;
+  padding-inline: max(40px, 10vw);
+}
+.opening-copy h1, .hero h2, .hero h2 .hero-small, .hero h2 .hero-baby,
+.eyebrow, .tap-note, .button, .hero-date, .detail-row h3,
+.event-card h2, .extra-card h2, .rsvp-card h2, .ultrasound-card h2,
+#rsvp-form > label, fieldset legend { text-transform: none; }
+.hero-date { font-size: clamp(1.55rem, 2.5vw, 1.85rem); gap: 8px; margin: 20px 0; text-align: center; }
+.hero-date strong { font-size: clamp(2rem, 3.6vw, 2.8rem); line-height: 1.2; }
+.event-card h2 { font-size: clamp(2.6rem, 5vw, 3.8rem); }
+.event-card .script-kicker { font-size: clamp(2.5rem, 5vw, 3.3rem); }
+.detail-row h3 { font-size: 1.65rem; font-weight: 700; }
+.detail-row p { font-size: clamp(1.4rem, 2vw, 1.6rem); line-height: 1.5; }
+.event-card { padding: 50px 38px; gap: 28px; }
+.date-art-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 1.5fr) minmax(0, 1fr); align-items: center; gap: 10px; width: 100%; margin: 15px 0 20px; }
+.date-potions, .date-pumpkins { display: block; width: 100%; height: auto; pointer-events: none; }
+.date-potions { transform: rotate(-6deg); }
+.date-pumpkins { transform: rotate(5deg); }
+.floral-divider { display: block; width: min(58%, 500px); height: auto; margin: 10px auto -15px; pointer-events: none; }
+.footer-flowers { width: min(65%, 470px); margin: -20px auto -25px; position: relative; z-index: 2; }
+.registry-potions { display: block; width: min(100%, 250px); height: auto; margin: 24px auto 0; pointer-events: none; }
+.pumpkin-cluster { width: min(100%, 300px); }
+.rsvp-pumpkins { width: min(85%, 280px); }
+.content-wrap { gap: 76px; padding-bottom: 50px; }
+.bat-flight { position: absolute; top: 0; left: 0; right: 0; height: 260px; pointer-events: none; z-index: 3; }
+.bat { position: absolute; width: clamp(45px, 7vw, 90px); height: auto; animation: bat-hover 5s ease-in-out infinite; }
+.bat-one { left: 2%; top: 0; }
+.bat-two { right: 2%; top: 32px; animation-delay: -2s; }
+.bat-three { right: 0; top: 180px; width: clamp(35px, 5vw, 62px); animation-delay: -3.5s; }
+@keyframes bat-hover { 0%,100% { transform: translate(0,0) rotate(-8deg); } 50% { transform: translate(8px,-14px) rotate(7deg); } }
+@media (max-width: 1000px) {
+  .event-card { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  body { padding: 82px 8% 75px; }
+  .hero { width: 100%; padding: 24px 6px 10px; }
+  .hero .eyebrow { margin-inline: 16px; }
+  .hero h2 { font-size: 3.2rem; }
+  .date-art-row { grid-template-columns: 1fr 1fr; gap: 0 20px; margin: 0 0 14px; }
+  .date-art-row .hero-date { grid-column: 1 / -1; grid-row: 1; }
+  .date-potions, .date-pumpkins { grid-row: 2; max-height: 155px; object-fit: contain; }
+  .hero-date { font-size: 1.5rem; }
+  .hero-date strong { font-size: 2rem; }
+  .floral-divider { width: 92%; margin: 20px auto -30px; }
+  .content-wrap { width: 100%; }
+  .event-card, .rsvp-card, .extra-card { padding-inline: 20px; }
+  .event-card { padding-block: 40px; }
+  .detail-row { grid-template-columns: 18px minmax(0, 1fr); gap: 6px; }
+  .detail-row p { font-size: 1.375rem; overflow-wrap: break-word; }
+  .detail-row h3 { font-size: 1.55rem; }
+  .event-card h2 { font-size: 2.5rem; }
+  .event-art { width: 145px; top: -4px; }
+  .rsvp-card { padding-top: 35px; }
+  .footer-flowers { margin-top: 0; margin-bottom: -15px; }
+  .bat-one { top: -32px; left: 2%; }
+  .bat-two { top: -16px; right: 2%; }
+  .bat-three { top: 150px; right: -5%; }
+  .opening-copy h1 { font-size: 2.8rem; }
+}
+@media (prefers-reduced-motion: reduce) { .bat { animation: none; } }
+/* Stretch only the middle of the supplied frame so its corner webs stay at the page ends. */
+body::before {
+  position: absolute;
+  background: none;
+  border-style: solid;
+  border-color: transparent;
+  border-width: clamp(100px, 16vw, 200px) clamp(25px, 8vw, 115px);
+  border-image-source: url("invitation-background.png");
+  border-image-slice: 300 130 fill;
+  border-image-repeat: stretch;
+}
+body::before { border-image-repeat: stretch round; }

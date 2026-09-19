@@ -15,7 +15,7 @@ let invitationOpened = false;
 function updateMusicButton(isPlaying) {
   musicControl.classList.toggle("playing", isPlaying);
   musicControl.setAttribute("aria-label", isPlaying ? "Pause background music" : "Play background music");
-  musicLabel.textContent = isPlaying ? "Music on" : "Music off";
+  musicLabel.textContent = isPlaying ? "Music On" : "Music Off";
   musicControl.querySelector(".music-icon").textContent = isPlaying ? "♪" : "↻";
 }
 
