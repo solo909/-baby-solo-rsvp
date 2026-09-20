@@ -1478,3 +1478,16 @@ footer { padding-block: 32px; }
   .costume-art { width: 126px; top: -40px; right: -5px; bottom: auto; }
   .costume-card h2 { font-size: 1.85rem; }
 }
+
+/* Registry and card readability adjustments. */
+.bow-ghost-art { left: -155px; right: auto; bottom: -145px; }
+.costume-card { padding: 24px 36px 34px; text-align: center; }
+.costume-art { position: relative; display: block; width: 160px; height: auto; inset: auto; margin: -12px auto 8px; }
+.costume-card .script-kicker,
+.rsvp-heading .script-kicker { font-size: clamp(2.7rem, 5vw, 3.5rem); line-height: 1.2; }
+@media (max-width: 720px) {
+  .bow-ghost-art { left: -22px; right: auto; bottom: -78px; width: 125px; }
+  .ultrasound-copy { padding-bottom: 80px; }
+  .costume-card { padding: 20px 22px 28px; }
+  .costume-art { width: 126px; margin-top: -8px; }
+}
