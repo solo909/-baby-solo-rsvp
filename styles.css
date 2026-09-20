@@ -1419,3 +1419,58 @@ footer { margin: 0 12px; border-radius: 30px 30px 76px 76px; background: #171217
   .pumpkin-ghost-scene .accessory-pacifier, .pumpkin-ghost-scene .accessory-bottle { width: 18%; }
 }
 @media (prefers-reduced-motion: reduce) { .scattered-bat { animation: none; } }
+
+/* Supplied title artwork and a more compact invitation. */
+.hero h2.illustrated-title { width: min(100%, 700px); padding: 0; margin: 0; line-height: 0; }
+.illustrated-title img { display: block; width: 100%; height: auto; }
+.hero { padding-top: 24px; padding-bottom: 20px; margin-bottom: 16px; }
+.hero::before, .hero::after { display: none; }
+.hero-art { width: min(510px, 85%); max-height: 46vh; margin: -12px 0 4px; }
+.hero-date { margin: 14px 0 18px; gap: 2px; }
+.content-wrap { gap: 50px; padding-bottom: 38px; }
+.event-piece { padding-top: 14px; }
+.event-card { padding-block: 34px; gap: 16px 28px; }
+.event-card h2, .extra-card h2, .rsvp-card h2 { margin-bottom: 12px; }
+.event-art { width: min(30vw, 285px); right: -135px; bottom: -55px; }
+.extras-stack { gap: 64px; padding-top: 22px; }
+.extra-card { padding-block: 34px; min-height: 0; }
+.raffle-card, .registry-card { min-height: 310px; }
+.raffle-art { width: min(34vw, 310px); right: -180px; bottom: -45px; }
+.registry-art { width: min(33vw, 300px); left: -170px; bottom: -40px; }
+.extra-card p:not(.script-kicker) { margin-bottom: 18px; }
+.rsvp-card { padding-block: 38px; }
+.rsvp-heading { margin-bottom: 24px; }
+footer { padding-block: 32px; }
+.costume-card {
+  width: min(85%, 820px); min-height: 280px;
+  overflow: visible; padding: 42px 190px 42px 40px;
+  background: radial-gradient(circle at 15% 100%, #edb8d6aa, transparent 65%), radial-gradient(circle at 95% 0, #d7c0edbb, transparent 60%), #fff5ed;
+}
+.costume-card h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1.35; text-transform: none; letter-spacing: .01em; margin: 10px 0 0; }
+.costume-card .script-kicker { font-size: clamp(1.8rem, 3vw, 2.4rem); }
+.costume-art { position: absolute; width: 230px; height: auto; right: -55px; bottom: -22px; pointer-events: none; }
+@media (max-width: 1000px) and (min-width: 721px) {
+  .costume-card { width: 92%; padding-right: 150px; }
+  .costume-art { width: 180px; right: -25px; }
+}
+@media (max-width: 720px) {
+  .hero { padding: 22px 10px 14px; }
+  .hero-art { width: 88%; max-height: 360px; margin: -4px 0 0; }
+  .content-wrap { gap: 48px; }
+  .event-piece { padding-top: 62px; }
+  .event-card { padding: 30px 20px; gap: 18px; }
+  .event-art { width: 142px; right: -8px; top: -7px; bottom: auto; }
+  .ultrasound-copy { padding: 12px 24px 55px; }
+  .photo-frame { padding: 16px; }
+  .bow-ghost-art { width: 125px; bottom: -60px; }
+  .extras-stack { gap: 64px; padding-top: 28px; }
+  .extra-card { padding: 30px 20px; }
+  .raffle-card { padding-top: 116px; min-height: 0; }
+  .raffle-art { width: 175px; top: -40px; bottom: auto; right: -8px; }
+  .registry-card { padding-top: 128px; min-height: 0; }
+  .registry-art { width: 170px; top: -42px; bottom: auto; left: -8px; }
+  .rsvp-card { padding-block: 30px; }
+  .costume-card { width: 100%; padding: 135px 22px 28px; min-height: 0; }
+  .costume-art { width: 126px; top: -40px; right: -5px; bottom: auto; }
+  .costume-card h2 { font-size: 1.85rem; }
+}
