@@ -1321,7 +1321,7 @@ footer { margin: 0 12px; border-radius: 30px 30px 76px 76px; background: #171217
 /* Reference-inspired lettering: a small A, lavender BABY, and black IS BREWING. */
 .hero h2 {
   width: 100%;
-  font-family: "Rye", Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 400;
   text-align: center;
   line-height: 1.15;
@@ -1330,7 +1330,7 @@ footer { margin: 0 12px; border-radius: 30px 30px 76px 76px; background: #171217
 .hero h2 .hero-small,
 .hero h2 .hero-baby,
 .hero h2 .hero-brewing {
-  font-family: "Rye", Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
@@ -1379,3 +1379,43 @@ footer { margin: 0 12px; border-radius: 30px 30px 76px 76px; background: #171217
   .hero h2 .hero-small { font-size: 2rem; }
   .parents { font-size: clamp(2rem, 8vw, 3.4rem); }
 }
+
+/* Solid letterforms and watercolor decorations. */
+.hero h2 .hero-small, .hero h2 .hero-baby, .hero h2 .hero-brewing { font-weight: 700; }
+.hero h2 .hero-baby {
+  color: #b68ccc; background: none; -webkit-text-fill-color: #b68ccc;
+  -webkit-text-stroke: 1px #332039; filter: none;
+  text-shadow: 1px 2px 0 #fff1f8;
+}
+.hero h2 .hero-small { margin-bottom: 32px; }
+.initial-b { position: relative; display: inline-block; }
+.title-witch-hat {
+  position: absolute; width: 1.12em; height: auto;
+  left: -.23em; bottom: .69em; transform: rotate(-12deg);
+  pointer-events: none; -webkit-text-stroke: 0;
+}
+.bat-flight { inset: 0; height: auto; z-index: 2; overflow: visible; }
+.scattered-bat { top: var(--flight-y); width: var(--flight-size); animation-delay: var(--flight-delay); animation-duration: 6s; }
+.opening-bats { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.heart-scatter { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
+.heart-scatter span { position: absolute; color: #171217; font-size: 22px; transform: rotate(-12deg); }
+.baby-accessories { display: flex; align-items: center; justify-content: center; gap: 48px; margin: -10px auto 32px; pointer-events: none; }
+.baby-accessories span { font-size: 20px; color: #171217; }
+.accessory-pacifier { width: 100px; height: auto; transform: rotate(-12deg); }
+.accessory-bottle { width: 90px; height: auto; transform: rotate(10deg); }
+.pumpkin-ghost-scene { display: flex; align-items: end; justify-content: center; gap: 38px; pointer-events: none; margin: -8px auto -22px; }
+.pumpkin-ghost { width: min(48%, 260px); height: auto; }
+.pumpkin-ghost-scene .accessory-bottle, .pumpkin-ghost-scene .accessory-pacifier { margin-bottom: 24px; }
+@media (max-width: 720px) {
+  .scattered-bat { width: calc(var(--flight-size) * .65); }
+  .hero h2 .hero-small { margin-bottom: 24px; }
+  .title-witch-hat { width: 1.04em; left: -.16em; }
+  .heart-scatter span { font-size: 17px; }
+  .baby-accessories { gap: 30px; margin: -5px auto 14px; }
+  .accessory-pacifier { width: 68px; }
+  .accessory-bottle { width: 62px; }
+  .pumpkin-ghost-scene { gap: 12px; width: 100%; margin-bottom: -32px; }
+  .pumpkin-ghost { width: 50%; }
+  .pumpkin-ghost-scene .accessory-pacifier, .pumpkin-ghost-scene .accessory-bottle { width: 18%; }
+}
+@media (prefers-reduced-motion: reduce) { .scattered-bat { animation: none; } }
