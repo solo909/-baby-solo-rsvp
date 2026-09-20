@@ -73,6 +73,11 @@ if (params.get("rsvp") === "success") {
   document.body.classList.remove("locked");
   rsvpForm.hidden = true;
   successMessage.hidden = false;
+
+  // Keep this confirmation visible without leaving a reusable success URL.
+  const cleanUrl = new URL(window.location.href);
+  cleanUrl.searchParams.delete("rsvp");
+  window.history.replaceState(window.history.state, "", cleanUrl.pathname + cleanUrl.search + cleanUrl.hash);
 }
 
 const revealObserver = new IntersectionObserver(
