@@ -698,6 +698,10 @@ a {
   margin-inline: auto;
 }
 
+#rsvp-form[hidden] {
+  display: none;
+}
+
 #rsvp-form > label,
 fieldset legend {
   margin-bottom: -10px;
